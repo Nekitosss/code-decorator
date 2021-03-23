@@ -14,123 +14,125 @@ struct BackgroundPickerView: View {
     @State private var imagePickerPresented = false
     
     var body: some View {
-        VStack(spacing: 12) {
-            HStack {
-                Text("Background configuration")
-                    .font(.title2)
-                Spacer()
-            }
-            
-            Picker(selection: $backgroundType.tagValue, label: Text("What is your favorite color?")) {
-                ForEach(BackgroundModel.Tag.allCases, id: \.self) {
-                    Text($0.stringValue)
-                }
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            
-            switch backgroundType.tagValue {
-            case .color:
+        ScrollView {
+            VStack(spacing: 12) {
                 HStack {
-                    Text("Background color")
-                        .fixedSize(horizontal: true, vertical: false)
-                    
+                    Text("Background configuration")
+                        .font(.title2)
                     Spacer()
-                    
-                    ColorPicker("Background color", selection: $backgroundType.color, supportsOpacity: false)
-                        .labelsHidden()
-                        .frame(maxHeight: UIDevice.current.userInterfaceIdiom == .mac ? 25 : .infinity)
                 }
-                .bubbled()
                 
-            case .gradient:
-                VStack {
-                    
+                Picker(selection: $backgroundType.tagValue, label: Text("What is your favorite color?")) {
+                    ForEach(BackgroundModel.Tag.allCases, id: \.self) {
+                        Text($0.stringValue)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                
+                switch backgroundType.tagValue {
+                case .color:
                     HStack {
-                        Text("Start color")
+                        Text("Background color")
                             .fixedSize(horizontal: true, vertical: false)
                         
                         Spacer()
                         
-                        ColorPicker("Start color", selection: $backgroundType.gradient.start, supportsOpacity: false)
+                        ColorPicker("Background color", selection: $backgroundType.color, supportsOpacity: false)
                             .labelsHidden()
-                            .frame(maxHeight: UIDevice.current.userInterfaceIdiom == .mac ? 25 : .infinity)
+                            .optionalMaxHeight(condition: UIDevice.current.userInterfaceIdiom == .mac, value: 25)
                     }
+                    .bubbled()
                     
-                    Divider()
-                    
-                    HStack {
-                        Text("End color")
-                            .fixedSize(horizontal: true, vertical: false)
+                case .gradient:
+                    VStack {
                         
-                        Spacer()
-                        
-                        ColorPicker("End color", selection: $backgroundType.gradient.end, supportsOpacity: false)
-                            .labelsHidden()
-                            .frame(maxHeight: UIDevice.current.userInterfaceIdiom == .mac ? 25 : .infinity)
-                    }
-                }
-                .bubbled()
-                
-            case .image:
-                VStack(spacing: 12) {
-                    HStack {
-                        Text("Background image")
-                        Spacer()
-                        backgroundType.image
-                            .frame(width: TopControlsView.height, height: TopControlsView.height)
-                            .clipShape(Circle())
-                            .overlay(Circle().stroke(Color(.separator)))
-                            .fileImporter(isPresented: $imagePickerPresented, allowedContentTypes: [.image], allowsMultipleSelection: false) { result in
-                                ImageImporter.importImage(result: result) {
-                                    backgroundType.image = .image($0)
-                                }
-                            }
-                            .onTapGesture {
-                                imagePickerPresented = true
-                            }
-                    }
-                    
-                    if UIDevice.current.userInterfaceIdiom == .mac {
                         HStack {
-                            Text("Double click to change image")
+                            Text("Start color")
                                 .fixedSize(horizontal: true, vertical: false)
-                                .foregroundColor(.secondary)
+                            
                             Spacer()
+                            
+                            ColorPicker("Start color", selection: $backgroundType.gradient.start, supportsOpacity: false)
+                                .labelsHidden()
+                                .optionalMaxHeight(condition: UIDevice.current.userInterfaceIdiom == .mac, value: 25)
                         }
                         
-                    }
-                    
-                    Divider()
-                    
-                    HStack {
-                        Text("Blur background")
-                        Spacer()
-                        Toggle("Blur background", isOn: $backgroundType.isBlurEnabled.animation())
-                            .labelsHidden()
-                    }
-                    
-                    if backgroundType.isBlurEnabled {
+                        Divider()
+                        
                         HStack {
-                            Text("Radius")
-                                .fixedSize()
-                            TextField("radius", value: $backgroundType.blurRadius, formatter: DigitFormatter.shared)
-                                .multilineTextAlignment(.trailing)
+                            Text("End color")
+                                .fixedSize(horizontal: true, vertical: false)
+                            
+                            Spacer()
+                            
+                            ColorPicker("End color", selection: $backgroundType.gradient.end, supportsOpacity: false)
+                                .labelsHidden()
+                                .optionalMaxHeight(condition: UIDevice.current.userInterfaceIdiom == .mac, value: 25)
                         }
-                        .padding(.leading)
                     }
+                    .bubbled()
+                    
+                case .image:
+                    VStack(spacing: 12) {
+                        HStack {
+                            Text("Background image")
+                            Spacer()
+                            backgroundType.image
+                                .frame(width: TopControlsView.height, height: TopControlsView.height)
+                                .clipShape(Circle())
+                                .overlay(Circle().stroke(Color(.separator)))
+                                .fileImporter(isPresented: $imagePickerPresented, allowedContentTypes: [.image], allowsMultipleSelection: false) { result in
+                                    ImageImporter.importImage(result: result) {
+                                        backgroundType.image = .image($0)
+                                    }
+                                }
+                                .onTapGesture {
+                                    imagePickerPresented = true
+                                }
+                        }
+                        
+                        if UIDevice.current.userInterfaceIdiom == .mac {
+                            HStack {
+                                Text("Double click to change image")
+                                    .fixedSize(horizontal: true, vertical: false)
+                                    .foregroundColor(.secondary)
+                                Spacer()
+                            }
+                            
+                        }
+                        
+                        Divider()
+                        
+                        HStack {
+                            Text("Blur background")
+                            Spacer()
+                            Toggle("Blur background", isOn: $backgroundType.isBlurEnabled.animation())
+                                .labelsHidden()
+                        }
+                        
+                        if backgroundType.isBlurEnabled {
+                            HStack {
+                                Text("Radius")
+                                    .fixedSize()
+                                TextField("radius", value: $backgroundType.blurRadius, formatter: DigitFormatter.shared)
+                                    .multilineTextAlignment(.trailing)
+                            }
+                            .padding(.leading)
+                        }
+                    }
+                    .bubbled()
+                }
+                
+                HStack {
+                    Text("Background padding")
+                        .fixedSize()
+                    TextField("Padding", value: $backgroundPadding, formatter: DigitFormatter.shared)
+                        .multilineTextAlignment(.trailing)
                 }
                 .bubbled()
             }
-            
-            HStack {
-                Text("Background padding")
-                    .fixedSize()
-                TextField("Padding", value: $backgroundPadding, formatter: DigitFormatter.shared)
-                    .multilineTextAlignment(.trailing)
-            }
-            .bubbled()
+            .padding()
         }
-        .padding()
         .background(Color(.systemGroupedBackground))
     }
 }

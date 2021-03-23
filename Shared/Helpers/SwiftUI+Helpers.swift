@@ -29,4 +29,12 @@ extension View {
             view?.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
         }
     }
+    
+    @ViewBuilder func optionalMaxHeight(condition: Bool, value: CGFloat) -> some View {
+        if condition {
+            self.frame(maxHeight: value)
+        } else {
+            self
+        }
+    }
 }
