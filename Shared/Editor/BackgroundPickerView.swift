@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BackgroundPickerView: View {
     
-    @Binding var backgroundType: Background
+    @Binding var backgroundType: BackgroundModel
     @Binding var backgroundPadding: CGFloat
     @State private var imagePickerPresented = false
     
@@ -22,7 +22,7 @@ struct BackgroundPickerView: View {
             }
             
             Picker(selection: $backgroundType.tagValue, label: Text("What is your favorite color?")) {
-                ForEach(Background.Tag.allCases, id: \.self) {
+                ForEach(BackgroundModel.Tag.allCases, id: \.self) {
                     Text($0.stringValue)
                 }
             }

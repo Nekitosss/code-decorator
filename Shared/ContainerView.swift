@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
 
-struct Background: Equatable, View {
+struct BackgroundModel: Equatable, View {
     var color: Color = .white
     var gradient: Gradient = .init(start: .purple, end: .yellow)
     var image: ImageType = .notSelected
@@ -199,92 +199,6 @@ struct ContainerView: View {
     }
 }
 
-struct BubbledButtonStyle: ButtonStyle {
-    
-    static var fontSize: CGFloat {
-        UIDevice.current.userInterfaceIdiom == .mac ? 14 : 20
-    }
-    
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(Font.system(size: BubbledButtonStyle.fontSize))
-            .foregroundColor(configuration.isPressed ? Color.blue.opacity(0.5) : .blue)
-            .frame(maxHeight: TopControlsView.height)
-            .padding(.horizontal)
-            .overlay(Capsule().stroke(Color(.separator)))
-    }
-    
-}
-
-struct ImageFile: FileDocument {
-    
-    enum ErrorType: Error {
-        case parseError
-    }
-    
-    let image: UIImage
-    
-    init(image: UIImage) {
-        self.image = image
-    }
-    
-    init(configuration: ReadConfiguration) throws {
-        guard let data = configuration.file.regularFileContents,
-              let image = UIImage(data: data)
-        else { throw ErrorType.parseError }
-        self.image = image
-    }
-    
-    func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        guard let data = image.pngData() else {
-            throw ErrorType.parseError
-        }
-        
-        let wrapper = FileWrapper(regularFileWithContents: data)
-        wrapper.filename = "decorated.png"
-        
-        return wrapper
-    }
-    
-    static var readableContentTypes: [UTType] { [.image] }
-    static var writableContentTypes: [UTType] { [.image] }
-    
-}
-
-extension View {
-    func snapshot() -> UIImage {
-        let controller = UIHostingController(rootView: self)
-        let view = controller.view
-
-        let targetSize = controller.view.intrinsicContentSize
-        view?.bounds = CGRect(origin: .zero, size: targetSize)
-        view?.backgroundColor = .clear
-
-        let renderer = UIGraphicsImageRenderer(size: targetSize)
-
-        return renderer.image { _ in
-            view?.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
-        }
-    }
-}
-
-extension UIImage {
-    
-    func addingShadow(blur:
-                        CGFloat = 1, shadowColor: UIColor = UIColor(white: 0, alpha: 1), offset: CGSize = CGSize(width: 1, height: 1) ) -> UIImage {
-
-        UIGraphicsBeginImageContextWithOptions(CGSize(width: size.width + 2 * blur, height: size.height + 2 * blur), false, 0)
-        let context = UIGraphicsGetCurrentContext()!
-
-        context.setShadow(offset: offset, blur: blur, color: shadowColor.cgColor)
-        draw(in: CGRect(x: blur - offset.width / 2, y: blur - offset.height / 2, width: size.width, height: size.height))
-        let image = UIGraphicsGetImageFromCurrentImageContext()!
-        
-        UIGraphicsEndImageContext()
-
-        return image
-    }
-}
 
 struct ContainerView_Previews: PreviewProvider {
     static var previews: some View {

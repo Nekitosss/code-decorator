@@ -12,5 +12,5 @@ struct EditorModel: Equatable {
     var shadowBlurRadius: CGFloat = 8
     var cornerRadius: CGFloat = 8
     var navigation: TopNavigation = TopNavigation()
-    var background: Background = .init()
+    var background: BackgroundModel = .init()
 }
