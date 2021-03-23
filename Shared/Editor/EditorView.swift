@@ -24,7 +24,7 @@ struct EditorView: View {
                     HStack {
                         Text("Corner radius:")
                         Spacer()
-                        TextField("CornerRadius", value: $model.cornerRadius, formatter: Utils.digitFormatter)
+                        TextField("CornerRadius", value: $model.cornerRadius, formatter: DigitFormatter.shared)
                             .multilineTextAlignment(.trailing)
                     }
                     
@@ -34,7 +34,7 @@ struct EditorView: View {
                     HStack {
                         Text("Shadow radius")
                         Spacer()
-                        TextField("Shadow radius", value: $model.shadowBlurRadius, formatter: Utils.digitFormatter)
+                        TextField("Shadow radius", value: $model.shadowBlurRadius, formatter: DigitFormatter.shared)
                             .multilineTextAlignment(.trailing)
                     }
                 }
@@ -59,10 +59,6 @@ struct EditorView: View {
     }
 }
 
-protocol StringRepresentable {
-    var stringValue: String { get }
-}
-
 struct InlinePicker<T: Hashable & StringRepresentable>: View {
     let description: String
     let allCases: [T]
@@ -82,13 +78,4 @@ struct InlinePicker<T: Hashable & StringRepresentable>: View {
             .pickerStyle(MenuPickerStyle())
         }
     }
-}
-
-struct Utils {
-    
-    static let digitFormatter: Formatter = {
-        let formatter = NumberFormatter()
-        formatter.allowsFloats = false
-        return formatter
-    }()
 }

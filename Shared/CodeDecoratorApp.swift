@@ -11,14 +11,6 @@ import UIKit
 @main
 struct CodeDecoratorApp: App {
     
-        let text = """
-        {
-            let a = 2
-        }
-        """
-    
-    let img = UIImage(named: "testable2")!
-    
     var body: some Scene {
         WindowGroup {
             ContainerView()

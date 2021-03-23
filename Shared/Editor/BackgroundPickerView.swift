@@ -81,7 +81,7 @@ struct BackgroundPickerView: View {
                             .clipShape(Circle())
                             .overlay(Circle().stroke(Color(.separator)))
                             .fileImporter(isPresented: $imagePickerPresented, allowedContentTypes: [.image], allowsMultipleSelection: false) { result in
-                                importImage(result: result) {
+                                ImageImporter.importImage(result: result) {
                                     backgroundType.image = .image($0)
                                 }
                             }
@@ -113,7 +113,7 @@ struct BackgroundPickerView: View {
                         HStack {
                             Text("Radius")
                                 .fixedSize()
-                            TextField("radius", value: $backgroundType.blurRadius, formatter: Utils.digitFormatter)
+                            TextField("radius", value: $backgroundType.blurRadius, formatter: DigitFormatter.shared)
                                 .multilineTextAlignment(.trailing)
                         }
                         .padding(.leading)
@@ -125,39 +125,12 @@ struct BackgroundPickerView: View {
             HStack {
                 Text("Background padding")
                     .fixedSize()
-                TextField("Padding", value: $backgroundPadding, formatter: Utils.digitFormatter)
+                TextField("Padding", value: $backgroundPadding, formatter: DigitFormatter.shared)
                     .multilineTextAlignment(.trailing)
             }
             .bubbled()
         }
         .padding()
         .background(Color(.systemGroupedBackground))
-    }
-}
-
-extension View {
-    
-    func bubbled() -> some View {
-        self.padding()
-            .background(Color(UIColor.secondarySystemGroupedBackground))
-            .clipShape(RoundedRectangle(cornerRadius: 12))
-    }
-    
-}
-
-func importImage(result: Result<[URL], Error>, handler: (UIImage) -> Void) {
-    switch result {
-    case .success(let urls):
-        guard let imageURL = urls.first else { break }
-        do {
-            let imageData = try Data(contentsOf: imageURL)
-            guard let image = UIImage(data: imageData) else { break }
-            handler(image)
-            
-        } catch {
-            break
-        }
-    case .failure:
-        break
     }
 }

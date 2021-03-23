@@ -3,18 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		FD38E9552606116C004A47D0 /* ResizableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38E9542606116C004A47D0 /* ResizableImageView.swift */; };
 		FD38E9562606116C004A47D0 /* ResizableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38E9542606116C004A47D0 /* ResizableImageView.swift */; };
-		FD38E95C26061DC0004A47D0 /* SwiftUITextOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38E95B26061DC0004A47D0 /* SwiftUITextOutputFormat.swift */; };
-		FD38E95D26061DC0004A47D0 /* SwiftUITextOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38E95B26061DC0004A47D0 /* SwiftUITextOutputFormat.swift */; };
 		FD49ADD52608E416002F7511 /* TopControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49ADD42608E416002F7511 /* TopControlsView.swift */; };
 		FD49ADD62608E416002F7511 /* TopControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49ADD42608E416002F7511 /* TopControlsView.swift */; };
-		FD49ADDD2608F255002F7511 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49ADDC2608F255002F7511 /* DocumentPicker.swift */; };
-		FD49ADDE2608F255002F7511 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49ADDC2608F255002F7511 /* DocumentPicker.swift */; };
 		FD49ADE22608FCD9002F7511 /* BackgroundPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49ADE12608FCD9002F7511 /* BackgroundPickerView.swift */; };
 		FD49ADE32608FCD9002F7511 /* BackgroundPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD49ADE12608FCD9002F7511 /* BackgroundPickerView.swift */; };
 		FD78B1AC26075DAE00FBC8A8 /* MacOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1AB26075DAE00FBC8A8 /* MacOverlayView.swift */; };
@@ -22,9 +18,7 @@
 		FD78B1B12607981F00FBC8A8 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1B02607981F00FBC8A8 /* EditorView.swift */; };
 		FD78B1B22607981F00FBC8A8 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1B02607981F00FBC8A8 /* EditorView.swift */; };
 		FD78B1B62607982F00FBC8A8 /* DragDelta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1B52607982F00FBC8A8 /* DragDelta.swift */; };
-		FD78B1B72607982F00FBC8A8 /* DragDelta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1B52607982F00FBC8A8 /* DragDelta.swift */; };
 		FD78B1BD2607987000FBC8A8 /* ImageDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1BC2607987000FBC8A8 /* ImageDropDelegate.swift */; };
-		FD78B1BE2607987000FBC8A8 /* ImageDropDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1BC2607987000FBC8A8 /* ImageDropDelegate.swift */; };
 		FD78B1C22607988B00FBC8A8 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1C12607988B00FBC8A8 /* ContainerView.swift */; };
 		FD78B1C32607988B00FBC8A8 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1C12607988B00FBC8A8 /* ContainerView.swift */; };
 		FD78B1C7260798A600FBC8A8 /* TopNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD78B1C6260798A600FBC8A8 /* TopNavigation.swift */; };
@@ -35,15 +29,19 @@
 		FD9DDD7D2601CE05009B8197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DDD682601CE03009B8197 /* ContentView.swift */; };
 		FD9DDD7E2601CE05009B8197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9DDD692601CE05009B8197 /* Assets.xcassets */; };
 		FD9DDD7F2601CE05009B8197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9DDD692601CE05009B8197 /* Assets.xcassets */; };
-		FD9DDD8E2601CE36009B8197 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = FD9DDD8D2601CE36009B8197 /* Splash */; };
-		FD9DDD932601CF78009B8197 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = FD9DDD922601CF78009B8197 /* Splash */; };
+		FDF61881260A1864006F8CD4 /* EditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF61880260A1864006F8CD4 /* EditorModel.swift */; };
+		FDF61885260A1880006F8CD4 /* TopNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF61884260A1880006F8CD4 /* TopNavigationModel.swift */; };
+		FDF6188C260A18D6006F8CD4 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6188B260A18D6006F8CD4 /* StringRepresentable.swift */; };
+		FDF61890260A18F2006F8CD4 /* DigitFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6188F260A18F2006F8CD4 /* DigitFormatter.swift */; };
+		FDF61894260A1929006F8CD4 /* SwiftUI+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF61893260A1929006F8CD4 /* SwiftUI+Helpers.swift */; };
+		FDF61898260A194B006F8CD4 /* ImageImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF61897260A194B006F8CD4 /* ImageImporter.swift */; };
+		FDF6189C260A197F006F8CD4 /* ImageCropper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6189B260A197F006F8CD4 /* ImageCropper.swift */; };
+		FDF618A0260A198F006F8CD4 /* UIImage+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6189F260A198F006F8CD4 /* UIImage+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD38E9542606116C004A47D0 /* ResizableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableImageView.swift; sourceTree = "<group>"; };
-		FD38E95B26061DC0004A47D0 /* SwiftUITextOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUITextOutputFormat.swift; sourceTree = "<group>"; };
 		FD49ADD42608E416002F7511 /* TopControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlsView.swift; sourceTree = "<group>"; };
-		FD49ADDC2608F255002F7511 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		FD49ADE12608FCD9002F7511 /* BackgroundPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundPickerView.swift; sourceTree = "<group>"; };
 		FD5118EE26060EEF001B3E51 /* CodeDecorator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodeDecorator.entitlements; sourceTree = "<group>"; };
 		FD78B1AB26075DAE00FBC8A8 /* MacOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacOverlayView.swift; sourceTree = "<group>"; };
@@ -60,6 +58,14 @@
 		FD9DDD762601CE05009B8197 /* CodeDecorator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeDecorator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9DDD782601CE05009B8197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD9DDD792601CE05009B8197 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		FDF61880260A1864006F8CD4 /* EditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModel.swift; sourceTree = "<group>"; };
+		FDF61884260A1880006F8CD4 /* TopNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationModel.swift; sourceTree = "<group>"; };
+		FDF6188B260A18D6006F8CD4 /* StringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
+		FDF6188F260A18F2006F8CD4 /* DigitFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitFormatter.swift; sourceTree = "<group>"; };
+		FDF61893260A1929006F8CD4 /* SwiftUI+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Helpers.swift"; sourceTree = "<group>"; };
+		FDF61897260A194B006F8CD4 /* ImageImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageImporter.swift; sourceTree = "<group>"; };
+		FDF6189B260A197F006F8CD4 /* ImageCropper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropper.swift; sourceTree = "<group>"; };
+		FDF6189F260A198F006F8CD4 /* UIImage+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD9DDD8E2601CE36009B8197 /* Splash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD9DDD932601CF78009B8197 /* Splash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +91,6 @@
 			children = (
 				FD49ADD42608E416002F7511 /* TopControlsView.swift */,
 				FD78B1B02607981F00FBC8A8 /* EditorView.swift */,
-				FD49ADDC2608F255002F7511 /* DocumentPicker.swift */,
 				FD49ADE12608FCD9002F7511 /* BackgroundPickerView.swift */,
 			);
 			path = Editor;
@@ -108,16 +111,15 @@
 		FD9DDD662601CE03009B8197 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FDF6188A260A18CF006F8CD4 /* Helpers */,
+				FDF6187F260A1857006F8CD4 /* Models */,
 				FD49ADD92608E6A2002F7511 /* Editor */,
 				FD9DDD672601CE03009B8197 /* CodeDecoratorApp.swift */,
 				FD38E9542606116C004A47D0 /* ResizableImageView.swift */,
 				FD9DDD682601CE03009B8197 /* ContentView.swift */,
 				FD78B1C6260798A600FBC8A8 /* TopNavigation.swift */,
 				FD78B1C12607988B00FBC8A8 /* ContainerView.swift */,
-				FD78B1BC2607987000FBC8A8 /* ImageDropDelegate.swift */,
-				FD78B1B52607982F00FBC8A8 /* DragDelta.swift */,
 				FD78B1AB26075DAE00FBC8A8 /* MacOverlayView.swift */,
-				FD38E95B26061DC0004A47D0 /* SwiftUITextOutputFormat.swift */,
 				FD9DDD692601CE05009B8197 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -156,6 +158,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FDF6187F260A1857006F8CD4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDF61880260A1864006F8CD4 /* EditorModel.swift */,
+				FDF61884260A1880006F8CD4 /* TopNavigationModel.swift */,
+				FD78B1B52607982F00FBC8A8 /* DragDelta.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDF6188A260A18CF006F8CD4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD78B1BC2607987000FBC8A8 /* ImageDropDelegate.swift */,
+				FDF6188B260A18D6006F8CD4 /* StringRepresentable.swift */,
+				FDF6188F260A18F2006F8CD4 /* DigitFormatter.swift */,
+				FDF61893260A1929006F8CD4 /* SwiftUI+Helpers.swift */,
+				FDF61897260A194B006F8CD4 /* ImageImporter.swift */,
+				FDF6189B260A197F006F8CD4 /* ImageCropper.swift */,
+				FDF6189F260A198F006F8CD4 /* UIImage+Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -173,7 +199,6 @@
 			);
 			name = "CodeDecorator (iOS)";
 			packageProductDependencies = (
-				FD9DDD8D2601CE36009B8197 /* Splash */,
 			);
 			productName = "CodeDecorator (iOS)";
 			productReference = FD9DDD6E2601CE05009B8197 /* CodeDecorator.app */;
@@ -193,7 +218,6 @@
 			);
 			name = "CodeDecorator (macOS)";
 			packageProductDependencies = (
-				FD9DDD922601CF78009B8197 /* Splash */,
 			);
 			productName = "CodeDecorator (macOS)";
 			productReference = FD9DDD762601CE05009B8197 /* CodeDecorator.app */;
@@ -226,7 +250,6 @@
 			);
 			mainGroup = FD9DDD612601CE03009B8197;
 			packageReferences = (
-				FD9DDD8C2601CE36009B8197 /* XCRemoteSwiftPackageReference "Splash" */,
 			);
 			productRefGroup = FD9DDD6F2601CE05009B8197 /* Products */;
 			projectDirPath = "";
@@ -262,15 +285,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDF61881260A1864006F8CD4 /* EditorModel.swift in Sources */,
+				FDF61885260A1880006F8CD4 /* TopNavigationModel.swift in Sources */,
 				FD78B1B62607982F00FBC8A8 /* DragDelta.swift in Sources */,
+				FDF61890260A18F2006F8CD4 /* DigitFormatter.swift in Sources */,
 				FD49ADE22608FCD9002F7511 /* BackgroundPickerView.swift in Sources */,
 				FD9DDD7C2601CE05009B8197 /* ContentView.swift in Sources */,
+				FDF61898260A194B006F8CD4 /* ImageImporter.swift in Sources */,
+				FDF6188C260A18D6006F8CD4 /* StringRepresentable.swift in Sources */,
 				FD49ADD52608E416002F7511 /* TopControlsView.swift in Sources */,
+				FDF618A0260A198F006F8CD4 /* UIImage+Helpers.swift in Sources */,
 				FD78B1C22607988B00FBC8A8 /* ContainerView.swift in Sources */,
-				FD49ADDD2608F255002F7511 /* DocumentPicker.swift in Sources */,
+				FDF61894260A1929006F8CD4 /* SwiftUI+Helpers.swift in Sources */,
+				FDF6189C260A197F006F8CD4 /* ImageCropper.swift in Sources */,
 				FD78B1C7260798A600FBC8A8 /* TopNavigation.swift in Sources */,
 				FD9DDD7A2601CE05009B8197 /* CodeDecoratorApp.swift in Sources */,
-				FD38E95C26061DC0004A47D0 /* SwiftUITextOutputFormat.swift in Sources */,
 				FD78B1B12607981F00FBC8A8 /* EditorView.swift in Sources */,
 				FD78B1BD2607987000FBC8A8 /* ImageDropDelegate.swift in Sources */,
 				FD38E9552606116C004A47D0 /* ResizableImageView.swift in Sources */,
@@ -282,17 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD78B1B72607982F00FBC8A8 /* DragDelta.swift in Sources */,
 				FD49ADE32608FCD9002F7511 /* BackgroundPickerView.swift in Sources */,
 				FD9DDD7D2601CE05009B8197 /* ContentView.swift in Sources */,
 				FD49ADD62608E416002F7511 /* TopControlsView.swift in Sources */,
 				FD78B1C32607988B00FBC8A8 /* ContainerView.swift in Sources */,
-				FD49ADDE2608F255002F7511 /* DocumentPicker.swift in Sources */,
 				FD78B1C8260798A600FBC8A8 /* TopNavigation.swift in Sources */,
 				FD9DDD7B2601CE05009B8197 /* CodeDecoratorApp.swift in Sources */,
-				FD38E95D26061DC0004A47D0 /* SwiftUITextOutputFormat.swift in Sources */,
 				FD78B1B22607981F00FBC8A8 /* EditorView.swift in Sources */,
-				FD78B1BE2607987000FBC8A8 /* ImageDropDelegate.swift in Sources */,
 				FD38E9562606116C004A47D0 /* ResizableImageView.swift in Sources */,
 				FD78B1AD26075DAE00FBC8A8 /* MacOverlayView.swift in Sources */,
 			);
@@ -540,30 +565,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		FD9DDD8C2601CE36009B8197 /* XCRemoteSwiftPackageReference "Splash" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JohnSundell/Splash.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.15.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		FD9DDD8D2601CE36009B8197 /* Splash */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD9DDD8C2601CE36009B8197 /* XCRemoteSwiftPackageReference "Splash" */;
-			productName = Splash;
-		};
-		FD9DDD922601CF78009B8197 /* Splash */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FD9DDD8C2601CE36009B8197 /* XCRemoteSwiftPackageReference "Splash" */;
-			productName = Splash;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FD9DDD622601CE03009B8197 /* Project object */;
 }

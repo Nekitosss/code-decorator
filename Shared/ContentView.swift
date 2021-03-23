@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Splash
 
 struct ContentView: View {
     
@@ -63,13 +62,13 @@ struct ContentView: View {
             .foregroundColor(Color(.separator))
     }
     
-    func imageContainer(image: UIImage) -> some View {
+    private func imageContainer(image: UIImage) -> some View {
         let totalImageSize = self.totalImageSize
         let deltaWidth = delta.width
         let deltaHeight = delta.height
-        let imageCenter: (GeometryProxy) -> CGPoint = {
-            .init(x: ($0.size.width + deltaWidth) / 2,
-                  y: ($0.size.height + deltaHeight) / 2)
+        let imageCenter: (GeometryProxy) -> CGPoint = { proxy in
+            .init(x: (proxy.size.width + deltaWidth) / 2,
+                  y: (proxy.size.height + deltaHeight) / 2)
         }
         let imageWidth: (GeometryProxy) -> CGFloat = {
             min($0.size.width, totalImageSize.width)

@@ -9,14 +9,6 @@ import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
 
-struct EditorModel: Equatable {
-    var backgroundPadding: CGFloat = 24
-    var shadowBlurRadius: CGFloat = 8
-    var cornerRadius: CGFloat = 8
-    var navigation: TopNavigation = TopNavigation()
-    var background: Background = .init()
-}
-
 struct Background: Equatable, View {
     var color: Color = .white
     var gradient: Gradient = .init(start: .purple, end: .yellow)

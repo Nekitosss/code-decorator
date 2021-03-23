@@ -50,8 +50,10 @@ struct TopControlsView: View {
             Label("Import", systemImage: "square.and.arrow.down")
         }
         .buttonStyle(BubbledButtonStyle())
-        .fileImporter(isPresented: $importImagePresented, allowedContentTypes: [.image], allowsMultipleSelection: false) { result in
-            importImage(result: result, handler: didImport)
+        .fileImporter(isPresented: $importImagePresented,
+                      allowedContentTypes: [.image],
+                      allowsMultipleSelection: false) { result in
+            ImageImporter.importImage(result: result, handler: didImport)
         }
     }
     
