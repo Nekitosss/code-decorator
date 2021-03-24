@@ -2,7 +2,7 @@
 
 Decorate your screenshots for personal blog, Twitter or any other social media
 
-![Top logo](resources/logo.png)
+![Top logo](Resources/logo.png)
 
 ### Features:
 1. Stretch screenshot to make it more airy
@@ -14,7 +14,7 @@ Decorate your screenshots for personal blog, Twitter or any other social media
 
 Original undecorated image for example:
 
-![Undecorated logo](resources/logo_original.png)
+![Undecorated logo](Resources/logo_original.png)
 
 ### Available in:
 1. Build from source: here on GitHub 😊
