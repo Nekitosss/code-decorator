@@ -29,6 +29,8 @@
 		FD9DDD7D2601CE05009B8197 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DDD682601CE03009B8197 /* ContentView.swift */; };
 		FD9DDD7E2601CE05009B8197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9DDD692601CE05009B8197 /* Assets.xcassets */; };
 		FD9DDD7F2601CE05009B8197 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD9DDD692601CE05009B8197 /* Assets.xcassets */; };
+		FDD592DA2616FD0F002082B1 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD592D92616FD0F002082B1 /* RoundedCorners.swift */; };
+		FDD592DB2616FD0F002082B1 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD592D92616FD0F002082B1 /* RoundedCorners.swift */; };
 		FDF61881260A1864006F8CD4 /* EditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF61880260A1864006F8CD4 /* EditorModel.swift */; };
 		FDF61885260A1880006F8CD4 /* TopNavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF61884260A1880006F8CD4 /* TopNavigationModel.swift */; };
 		FDF6188C260A18D6006F8CD4 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF6188B260A18D6006F8CD4 /* StringRepresentable.swift */; };
@@ -61,6 +63,7 @@
 		FD9DDD762601CE05009B8197 /* CodeDecorator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeDecorator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD9DDD782601CE05009B8197 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD9DDD792601CE05009B8197 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		FDD592D92616FD0F002082B1 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		FDF61880260A1864006F8CD4 /* EditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModel.swift; sourceTree = "<group>"; };
 		FDF61884260A1880006F8CD4 /* TopNavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationModel.swift; sourceTree = "<group>"; };
 		FDF6188B260A18D6006F8CD4 /* StringRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
@@ -187,6 +190,7 @@
 				FDF6189F260A198F006F8CD4 /* UIImage+Helpers.swift */,
 				FDF618B5260A1AF6006F8CD4 /* ImageFile.swift */,
 				FDF618B9260A1B19006F8CD4 /* BubbledButtonStyle.swift */,
+				FDD592D92616FD0F002082B1 /* RoundedCorners.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -296,6 +300,7 @@
 			files = (
 				FDF61881260A1864006F8CD4 /* EditorModel.swift in Sources */,
 				FDF61885260A1880006F8CD4 /* TopNavigationModel.swift in Sources */,
+				FDD592DA2616FD0F002082B1 /* RoundedCorners.swift in Sources */,
 				FD78B1B62607982F00FBC8A8 /* DragDelta.swift in Sources */,
 				FDF61890260A18F2006F8CD4 /* DigitFormatter.swift in Sources */,
 				FD49ADE22608FCD9002F7511 /* BackgroundPickerView.swift in Sources */,
@@ -323,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD592DB2616FD0F002082B1 /* RoundedCorners.swift in Sources */,
 				FD49ADE32608FCD9002F7511 /* BackgroundPickerView.swift in Sources */,
 				FD9DDD7D2601CE05009B8197 /* ContentView.swift in Sources */,
 				FD49ADD62608E416002F7511 /* TopControlsView.swift in Sources */,

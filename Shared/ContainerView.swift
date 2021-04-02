@@ -91,6 +91,7 @@ struct ContainerView: View {
                                               initialSize: initialSize,
                                               forImageDrawingContext: true)
             .frame(width: croppedImage.size.width, height: croppedImage.size.height)
+            .clipShape(RoundedCorners(tl: model.cornerRadius, tr: model.cornerRadius, bl: 0, br: 0))
         
         let backgroundSnapshot = background.snapshot()
         let navigationSnapshot = topNavigation.snapshot()
